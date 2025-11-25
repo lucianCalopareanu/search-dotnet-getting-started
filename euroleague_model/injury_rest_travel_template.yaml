@@ -1,0 +1,34 @@
+# Update this file before each slate and feed the edited copy to the pipeline
+# via --slate-input. Keep team names consistent with EuroLeague naming.
+
+slate_date: 2025-01-15
+
+teams:
+  Real Madrid:
+    injuries:
+      - player: Walter Tavares
+        status: out
+        note: left ankle sprain sustained 2025-01-10
+        usage_penalty: 0.08   # subtract from team usage share
+    travel_override_km: null   # set if team took long-haul trip beyond auto distance
+    domestic_fixture:
+      date: 2025-01-12
+      location: away
+      competition: ACB
+    rest_override_days: null   # set integer if domestic fixture differs from API
+
+  Anadolu Efes:
+    injuries:
+      - player: Darius Thompson
+        status: questionable
+        note: flu-like symptoms
+        usage_penalty: 0.05
+    travel_override_km: 2800   # chartered flight from Istanbul -> Kaunas
+    domestic_fixture: null
+    rest_override_days: null
+
+# Global toggles (optional)
+pace_override: null      # if set, overrides blended pace for slate
+simulation:
+  spread_adjustment: 0.0 # manual nudge (points)
+  total_adjustment: 0.0  # manual nudge (points)
